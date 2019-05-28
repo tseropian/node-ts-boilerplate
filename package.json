@@ -7,6 +7,7 @@
     "node": ">=8.9"
   },
   "dependencies": {
+    "@types/node": "^12.0.2",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
@@ -15,22 +16,22 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "lb-tsc es2017 --outDir dist",
-    "build:watch": "lb-tsc --watch",
-    "clean": "lb-clean dist",
+    "build": "tsc es2017 --outDir dist",
+    "build:watch": "tsc --watch",
+    "clean": "clean dist",
     "lint": "npm run prettier:check && npm run tslint",
     "lint:fix": "npm run tslint:fix && npm run prettier:fix",
     "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
     "prettier:check": "npm run prettier:cli -- -l",
     "prettier:fix": "npm run prettier:cli -- --write",
     "tslint": "lb-tslint",
-    "tslint:fix": "npm run tslint -- --fix",
+    "tslint:fix": "npm run tslint -- --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tseropian/node-ts-boilerplate.git"
   },
-  "author": "Thomas Seropian",
+  "author": "Thomas Seropian <thomas@seropian.io>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tseropian/node-ts-boilerplate/issues"
