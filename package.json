@@ -1,0 +1,39 @@
+{
+  "name": "ts-boilerplate",
+  "version": "0.0.1",
+  "description": "A basic Node + TS boilerplate for some of my projects",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.9"
+  },
+  "dependencies": {
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "tslint": "^5.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lb-tsc es2017 --outDir dist",
+    "build:watch": "lb-tsc --watch",
+    "clean": "lb-clean dist",
+    "lint": "npm run prettier:check && npm run tslint",
+    "lint:fix": "npm run tslint:fix && npm run prettier:fix",
+    "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "tslint": "lb-tslint",
+    "tslint:fix": "npm run tslint -- --fix",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tseropian/node-ts-boilerplate.git"
+  },
+  "author": "Thomas Seropian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tseropian/node-ts-boilerplate/issues"
+  },
+  "homepage": "https://github.com/tseropian/node-ts-boilerplate#readme"
+}
